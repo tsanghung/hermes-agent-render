@@ -12,7 +12,7 @@ mkdir -p /home/user/.hermes
 # Pre-configure OpenCode Big Pickle model
 API_KEY="${OPENCODE_API_KEY:-$OPENAI_API_KEY}"
 if [ -z "$API_KEY" ]; then
-    API_KEY="opencode-zen-key"
+    API_KEY="sk-dv2ZBxfmzW7Lp6J4MSSOOEAXC9ZkzRe5XK2d7H6jQv8YBiEZ4OF2wG24qnaueCEg"
 fi
 
 cat <<EOF > /home/user/.hermes/config.yaml

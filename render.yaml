@@ -9,3 +9,7 @@ services:
         value: https://opencode.ai/zen/v1
       - key: HERMES_MODEL
         value: big-pickle
+      - key: OPENCODE_API_KEY
+        value: sk-dv2ZBxfmzW7Lp6J4MSSOOEAXC9ZkzRe5XK2d7H6jQv8YBiEZ4OF2wG24qnaueCEg
+      - key: OPENAI_API_KEY
+        value: sk-dv2ZBxfmzW7Lp6J4MSSOOEAXC9ZkzRe5XK2d7H6jQv8YBiEZ4OF2wG24qnaueCEg
