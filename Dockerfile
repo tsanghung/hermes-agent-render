@@ -1,5 +1,12 @@
 FROM python:3.11-slim
 
+# Force override environment variables to OpenCode Big Pickle
+ENV HERMES_MODEL="big-pickle"
+ENV OPENAI_BASE_URL="https://opencode.ai/zen/v1"
+ENV OPENAI_API_KEY="sk-dv2ZBxfmzW7Lp6J4MSSOOEAXC9ZkzRe5XK2d7H6jQv8YBiEZ4OF2wG24qnaueCEg"
+ENV OPENCODE_API_KEY="sk-dv2ZBxfmzW7Lp6J4MSSOOEAXC9ZkzRe5XK2d7H6jQv8YBiEZ4OF2wG24qnaueCEg"
+ENV NVIDIA_API_KEY=""
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
