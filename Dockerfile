@@ -30,6 +30,11 @@ WORKDIR /home/user
 # Install Hermes Agent via official install script
 RUN curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash || true
 
+# Pre-set config during Docker build
+RUN mkdir -p /home/user/.hermes && \
+    echo 'model:\n  provider: custom\n  name: big-pickle\n  base_url: https://opencode.ai/zen/v1\n  api_key: sk-dv2ZBxfmzW7Lp6J4MSSOOEAXC9ZkzRe5XK2d7H6jQv8YBiEZ4OF2wG24qnaueCEg' > /home/user/.hermes/config.yaml && \
+    echo '{"custom": {"api_key": "sk-dv2ZBxfmzW7Lp6J4MSSOOEAXC9ZkzRe5XK2d7H6jQv8YBiEZ4OF2wG24qnaueCEg", "base_url": "https://opencode.ai/zen/v1"}}' > /home/user/.hermes/auth.json
+
 # Entrypoint script
 COPY --chown=user:user entrypoint.sh /home/user/entrypoint.sh
 RUN chmod +x /home/user/entrypoint.sh
