@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: hermes-agent
+    env: docker
+    plan: free
+    region: singapore
+    envVars:
+      - key: NVIDIA_API_KEY
+        value: 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
+      - key: OPENAI_API_KEY
+        value: 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
+      - key: OPENAI_BASE_URL
+        value: https://integrate.api.nvidia.com/v1
